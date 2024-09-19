@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Cliente</h1>
+        <form action="../controller/recebeCliente.php" method="POST">
+            <div class="field">
+                <label for="nome">Digite seu nome:</label>
+                <input id="nome" type="text" name="nome" placeholder=" " required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="cpf">Digite seu CPF:</label>
+                <input id="cpf" type="text" name="cpf" placeholder=" " required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="telefone">Digite seu telefone:</label>
+                <input id="telefone" type="text" name="telefone" placeholder=" " required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="email">Digite seu email:</label> 
+                <input id="email" type="email" name="email" placeholder=" "><br><br> 
+            </div>
+
+            <div class="field">
+                <button type="submit" class="btn-6" onclick="audio.play();">Enviar</button>
+                <button type="reset" class="btn-6" onclick="audio.play();">Limpar</button>
+            </form>
+        </div>
+        <script src="play_audio.js"></script>
+    </body>
+</html>

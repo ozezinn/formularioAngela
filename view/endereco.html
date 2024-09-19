@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Endereço</h1>
+        <form action="../controller/recebeEndereco.php" method="POST">
+            <div class="field">
+                <label for="cep">CEP:</label>
+                <input placeholder=" " type="text" id="cep" name="cep" maxlength="9"><br><br>
+            </div>
+            
+            <div class="field">
+                <label for="rua">Rua/Avenida:</label>
+                <input placeholder=" " type="text" id="rua" name="rua" required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="numero">Número:</label>
+                <input placeholder=" " type="text" id="numero" name="numero"><br><br>
+            </div>
+
+            <div class="field">
+                <label for="complemento">Complemento:</label>
+                <input placeholder=" " type="text" id="complemento" name="complemento"><br><br>
+            </div>
+
+            <div class="field">
+                <label for="bairro">Bairro:</label>
+                <input placeholder=" " type="text" id="bairro" name="bairro" required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="cidade">Cidade:</label>
+                <input placeholder=" " type="text" id="cidade" name="cidade" required><br><br>
+            </div>
+
+            <div class="field">
+                <label for="observacoes">Observações:</label>
+                <input placeholder=" " type="text" id="observacoes" name="observacao"><br><br>
+            </div>
+
+            <div class="field">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecione</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Apartamento">Apartamento</option>
+                    <option value="Residencial">Residencial</option>
+                </select><br><br>
+            </div>
+
+            <div class="field">
+                <label for="uf">UF:</label>
+                <select id="uf" name="uf" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select><br><br>
+            </div>
+
+            <button type="submit" class="btn-6" onclick="audio.play();">Enviar</button>
+            <button type="reset" class="btn-6" onclick="audio.play();">Limpar</button>
+        </form>
+    </div>
+    <script src="play_audio.js"></script>
+</body>
+</html>

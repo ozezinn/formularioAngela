@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>venda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Venda</h1>
+        <form action="/submit-endereco" method="post">
+            <div class="field"> 
+            <label for="data">data:</label>
+            <input  placeholder=" " type="date" id="data" name="data" required><br><br>
+            </div>
+
+            <div class="field"> 
+            <label for="nFiscal">Codigo de compra:</label>
+            <input  placeholder=" " type="text" id="nFiscal" name="nFiscal" required><br><br>
+            </div>
+
+            <div class="field"> 
+            <label for="nFiscal">Nota fiscal:</label>
+            <input  placeholder=" " type="text" id="nFiscal" name="nFiscal"><br><br>
+            </div>
+
+            <div class="field"> 
+            <label for="Codigo">Codigo da Produto:</label>
+            <input  placeholder=" " type="text" id="Codigo" name="Codigo"><br><br>
+            </div>
+
+            <div class="field"> 
+            <label for="quantidade">Quantidade:</label>
+            <input  placeholder=" " type="text" id="quantidade" name="quantidade" required><br><br>
+            </div>
+
+            <div class="field"> 
+            <label for="vUnitario">Valor Unitario:</label>
+            <input  placeholder=" " type="text" id="vUnitario" name="vUnitario" maxlength="9"><br><br>
+            </div>
+            <button class="btn-6" type="submit">Enviar</button>
+            <button type="reset" class="btn-6">limpar</button> 
+        </form>          
+    
+        </form>
+    </div>
+    
+</body>
+</html>
