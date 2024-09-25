@@ -1,14 +1,13 @@
 <?php
-require_once '../model/conexao.php';
+include_once '../model/conexao.php';
 include '../view/cliente.html';
 
-// Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtém e sanitiza os dados do POST
-    $nomeCliente = isset($_POST['nome']) ? $_POST['nome'] : '';
-    $cpfCliente = isset($_POST['cpf']) ? $_POST['cpf'] : '';
-    $telefoneCliente = isset($_POST['telefone']) ? $_POST['telefone'] : '';
-    $emailCliente = isset($_POST['email']) ? $_POST['email'] : '';
+    $nomeCliente = addslashes($_POST['nome']);
+    $cpfCliente = addslashes($_POST['cpf']);
+    $telefoneCliente = addslashes($_POST['telefone']);
+    $emailCliente = addslashes($_POST['email']);
 
     // Verifica se todos os campos obrigatórios estão preenchidos
     if (empty($nomeCliente) || empty($cpfCliente) || empty($telefoneCliente) || empty($emailCliente)) {
