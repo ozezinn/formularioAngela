@@ -49,20 +49,16 @@ class Conexao {
 
     
     public function insereProduto($nomeProduto, $modeloProduto, $tecidoProduto, $marcaProduto, $corProduto) {
-        try {
+        
             $insere = $this->pdo->prepare("INSERT INTO produto (nome, modelo, tecido, marca, cor) 
-                                            VALUES (:nome, :modelo, :tecido, :marca, :cor)");
+            VALUES (:nome, :modelo, :tecido, :marca, :cor)");
     
             $insere->bindValue(":nome", $nomeProduto);
             $insere->bindValue(":modelo", $modeloProduto);
             $insere->bindValue(":tecido", $tecidoProduto);
             $insere->bindValue(":marca", $marcaProduto);
             $insere->bindValue(":cor", $corProduto);
-    
-            return $insere->execute();
-        } catch (PDOException $e) {
-            throw new Exception("Erro ao inserir produto: " . $e->getMessage());
-        }
+            $insere->execute();
     }
 }
 
