@@ -3,11 +3,11 @@ require_once '../model/conexao.php';
 include '../view/produto.html';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nomeProduto = $_POST['nome'];
-    $modeloProduto = $_POST['modelo'];
-    $tecidoProduto = $_POST['tecido'];
-    $marcaProduto = $_POST['marca'];
-    $corProduto = $_POST['cor'];
+    $nomeProduto = addslashes($_POST['nome']);
+    $modeloProduto = addslashes($_POST['modelo']);
+    $tecidoProduto = addslashes($_POST['tecido']);
+    $marcaProduto = addslashes($_POST['marca']);
+    $corProduto = addslashes($_POST['cor']);
 
     $produto = new Conexao();
 
