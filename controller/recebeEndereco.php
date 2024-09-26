@@ -18,10 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($enderecoC->insereEndereco($ufEndC, $cidadeEndC, $bairroEndC, $ruaEndC, $cepEndC, $tipoEndC, $observacaoC, $numeroEndC, $complementoC)) {
         echo "<br><br>";
-        echo "<div class='endereco'><h2>ENDEREÇO CADASTRADO COM SUCESSO</h2></div>";
+        echo "<div class='endereco'><h2>ERRO AO CADASTRAR O ENDEREÇO</h2></div>";
+        
     } else {
         echo "<br><br>";
-        echo "<div class='endereco'><h2>ERRO AO CADASTRAR O ENDEREÇO</h2></div>";
+        echo "<div class='endereco'><h2>ENDEREÇO CADASTRADO COM SUCESSO</h2></div>";
     }
 }
 ?>
