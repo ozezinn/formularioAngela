@@ -90,7 +90,6 @@ select * from endereco;
 select * from produto;
 
 
-
 -- ESTRUTURA CRUD
 -- C - CRIAR/INSERIR DADOS NA TABELA
 insert into tamanho (sigla)
